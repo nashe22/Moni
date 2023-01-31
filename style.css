@@ -1,0 +1,39 @@
+body { background-color:#1B1B1B;margin:0px;
+  --serif: Playfair Display, serif;
+  --other: Poppins, sans-serif;
+}
+
+.sdeth { border:solid 15px #e9e9e9;width:300px;height:450px;margin:calc(50vh - 250px) auto 0px auto;background-color:#111;color:#e9e9e9;box-shadow:0px 10px 35px -15px rgba(0,0,0,.15); }
+.sdeth-1 { height:450px;width:300px;position:relative;overflow:hidden; }
+.sdeth-top { height:425px;width:300px;background:linear-gradient(135deg,#4F4F4F 2%,#4B72E0);clip-path:url(#sdeth-clip);margin-top:-25px;padding-top:25px;mix-blend-mode:lighten;position:relative;background-size:100% 100%;transition:.5s; }
+.sdeth-links { position:absolute;z-index:5;bottom:102px;left:27px;display:flex;flex-direction:column;gap:5px; }
+.sdeth-links a { display:block;height:35px;width:35px;background-color:#111;border-radius:4px;font:italic 800 15px var(--serif);text-align:center;line-height:32px;cursor:pointer;transition:1s; }
+.sdeth-links a:hover { color:#f68080; }
+.sdeth-tog { position:absolute;z-index:2;border:solid 1px #111;border-radius:100%;height:58px;width:58px;bottom:75px;right:50px;color:#111;font:200 31px var(--other);cursor:pointer;display:grid;grid-template-rows:58px 58px;overflow:hidden;transition:.5s; }
+.sdeth-tog span { display:block;height:58px;width:58px;display:flex;justify-content:center;align-items:center;transition:.9s; }
+.sdeth-tog:hover span { margin-top:-58px; }
+.sdeth-togg, .sdeth-togg + .sdeth-sv { opacity:0; }
+.sdeth-sv { position:absolute;z-index:1;bottom:40px;right:20px;transition:.5s; }
+.sdeth-svg text { font:400 10px var(--other);line-height:10px;letter-spacing:3.5px;fill:#111;pointer-events:none;transition:1s;
+  transform-origin: 50% 50%; }
+.sdeth-tog:hover + .sdeth-sv .sdeth-svg text { transform:rotate(180deg); }
+.sdeth-top-img { height:400px;width:300px;background-image:url(https://i.ibb.co/dj96yBS/Monita.png);background-size:cover;background-position:center;filter:grayscale(0%);mix-blend-mode:multiply;transition:.5s; }
+.sdeth-togged .sdeth-top-img { opacity:0; }
+.sdeth-top-img::before { position:absolute;z-index:1;content:'';display:block;height:400px;width:300px;background:linear-gradient(to bottom,transparent 30%,#fff 100%);transition:.5s; }
+.sdeth-top-dots { margin-top:-400px;height:400px;width:300px;background:radial-gradient(circle at center,#111 0% 46%,transparent 50%);background-size:20px 20px;background-attachment:fixed;background-position:top 5px left 13px;opacity:0;mix-blend-mode:overlay;transition:.5s; }
+.sdeth-top.sdeth-togged .sdeth-top-dots { opacity:.15; }
+.sdeth-top.sdeth-togged { margin-top:-360px;background-size:250% 250%; }
+.sdeth-group { font:italic 800 75px var(--serif);line-height:50px;margin:-25px 0px -94px -5px;color:#191919;text-align:right;pointer-events:none;transition:.5s; }
+.sdeth-top.sdeth-togged + .sdeth-group { opacity:0; }
+.sdeth-name { font:800 20px var(--other);text-transform:uppercase;letter-spacing:3px;line-height:20px;padding:27px;cursor:pointer;border-bottom:solid 1px #191919;transition:1s; }
+.sdeth-name:hover { color:#8399DD; }
+.sdeth-icon { height:118px;width:118px;padding:9px;border:solid 1px #191919;border-radius:100% 0% 100% 100%;background-color:#111;position:absolute;z-index:1;margin:-125px 0px 0px 180px;transform:scale(.5);opacity:0;transition:.5s; }
+.sdeth-top.sdeth-togged ~ .sdeth-icon { opacity:1;transform:scale(1); }
+.sdeth-icon div { height:70px;width:70px;padding:24px;background-color:#191919;border-radius:100%; }
+.sdeth-icon img { height:70px;width:70px;border-radius:100%;mix-blend-mode:lighten; }
+.sdeth-blurb { display:grid;grid-template-columns:90px auto; }
+.sdeth-groupp { border-right:solid 1px #191919;display:flex;align-items:flex-end;padding:35px;background:radial-gradient(circle at center,#141414 0% 31%,transparent 35%);background-size:20px 20px;background-attachment:fixed;background-position:top 5px left 13px; }
+.sdeth-groupp div { transform:rotate(-90deg);height:0px;width:0px;white-space:nowrap;font:italic 800 35px var(--serif);line-height:20px; }
+.sdeth-groupp div b { background:linear-gradient(to right,#80ADF6 3%,#4F7BC7);background-clip:text;-webkit-background-clip:text;color:transparent;padding-right:8px;font-weight:800!important; }
+.sdeth-blurb-1 { padding:37px;display:flex;flex-direction:column;gap:20px;font:200 12px var(--other);text-transform:uppercase;line-height:10px;letter-spacing:1.5px; }
+.sdeth-blurb h1 { margin:0px 0px 11px 0px;font:italic 800 20px var(--serif);line-height:15px;text-transform:lowercase;color:#292929;letter-spacing:0px; }
